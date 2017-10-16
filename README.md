@@ -38,14 +38,22 @@ yarn build
 #  to be compiled to css using:
 yarn clean-build-css
 
+## Run end-to-end tests
+yarn start
+#### In a separate window run
+yarn test:e2e
+
 ```
-Using `yarn add` to add new dependencies
-will throw an error related to node-sass-chokidar, which can be ignored.
 
 For the best development experience, you should install both the React and Redux Development Tools extensions into your browser. Both browser extensions are available for Chrome and Firefox.
 
 ### Unit testing
 Unit testing in this repository is done using [Jest](https://facebook.github.io/jest/) with [Enzyme](https://github.com/airbnb/enzyme) in addition to the [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store) library to support Redux-related tests.
+
+### End-to-End testing
+End-to-end (e2e) tests use the [WebdriverJs](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs) library and run with [Mocha](https://mochajs.org/). The [Chai](http://chaijs.com/) and [Chai as Promised](https://github.com/domenic/chai-as-promised) libraries are used for assertions.
+
+Make sure that you start the app in a separate window before you run the e2e tests (see above).
 
 ## Architecture, Data Flow and Strong Typing
 A selection of files in this repository include code comments describing the architecture, data flow and strong typing conventions used in developing the React-Redux-TypeScript version of the 5 Calls application. These include files that illustrate the following (see the individual files for more details):
