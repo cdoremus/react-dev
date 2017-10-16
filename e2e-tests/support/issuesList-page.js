@@ -68,8 +68,8 @@ class IssuesListPage extends BasePage {
    * all active issues
    */
   followAllActiveIssuesListLink() {
-    const linkText = By.linkText('View all active issues');
-    this.waitForElement(linkText).click();
+    const allIssuesLinkSelector = By.css('a.issues__footer-link > span');
+    this.waitForElement(allIssuesLinkSelector).click();
     return new AllActiveIssuesListPage(this.driver);
   }
 
@@ -81,7 +81,7 @@ class IssuesListPage extends BasePage {
    *
    */
   followHomeLink() {
-    const selector = By.css('#root > div > header > div > a > img');
+    const selector = By.css('#root div > header > div > a > img');
     this.waitForElement(selector).click();
     return new HomePage(this.driver);
   }

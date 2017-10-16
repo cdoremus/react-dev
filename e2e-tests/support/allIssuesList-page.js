@@ -45,7 +45,7 @@ class AllActiveIssuesListPage extends BasePage {
    * Home page.
    */
   followHomeLink() {
-    const selector = By.css('div.logo__header__logo layout > a > img');
+    const selector = By.css('#root header > div > a > img');
     this.waitForElement(selector).click();
     return new HomePage(this.driver);
   }

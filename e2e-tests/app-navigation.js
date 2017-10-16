@@ -70,7 +70,7 @@ test.describe('Should be able to navigate', function() {
     });
     // FIXME: Home link from a issue/call page is different
     // than home link from other pages
-    test.xit("to home page", function() {
+    test.it("to home page", function() {
       page.followFirstIssue();
       this.driver.navigate().refresh();
       page.followHomeLink();
